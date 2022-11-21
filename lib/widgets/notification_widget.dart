@@ -1,6 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
-import 'package:timezone/timezone.dart';
 
 class NotificationWidget{
   static final _notification = FlutterLocalNotificationsPlugin();
@@ -27,13 +26,12 @@ class NotificationWidget{
       payload: payload
   );
 
-  static Future<void> showScheduledNotification(int id, String title, String body, DateTime time) async {
+  static Future<void> showScheduledNotification(int id, String title, String body) async {
     await _notification.zonedSchedule(
       id,
       title,
       body,
-      //tz.TZDateTime.now(tz.local).add(Duration(seconds: 20)), //schedule the notification to show after 2 seconds.
-      tz.TZDateTime.now(tz.local).add(Duration(seconds: time.millisecondsSinceEpoch - DateTime.now().millisecondsSinceEpoch - 3600)), //Aviso 1 hora antes con un recordatorio.
+      tz.TZDateTime.now(tz.local).add(Duration(seconds: 20)), //schedule the notification to show after 2 seconds.
       await notificationDetails(),
       // Type of time interpretation
       uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,

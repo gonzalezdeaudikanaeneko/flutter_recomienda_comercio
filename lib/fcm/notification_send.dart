@@ -1,4 +1,4 @@
-
+/*
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
@@ -26,3 +26,4 @@ Future<bool> sendNotification(NotificationPayloadModel notificationPayloadModel)
   return result.statusCode == 200 ? true : false;
 
 }
+*/

@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class BookingModel {
   late String docId, servicioId, servicioName, establecimiento, customerName,
-      customerEmail, salonAddress, salonId, salonName, time, customerPhone, idEstablecidiento;
+      customerEmail, salonAddress, salonId, salonName, time, customerPhone;
   late bool done;
   late int slot, timeStamp, duration;
 
@@ -11,7 +11,6 @@ class BookingModel {
   BookingModel({
     required this.servicioId,
     required this.servicioName,
-    required this.idEstablecidiento,
     required this.establecimiento,
     required this.customerName,
     required this.customerEmail,
@@ -29,7 +28,6 @@ class BookingModel {
     servicioId = json['servicioId'];
     servicioName = json['servicioName'];
     establecimiento = json['establecimiento'];
-    idEstablecidiento = json['idEstablecidiento'];
     customerName = json['customerName'];
     customerEmail = json['customerEmail'];
     salonAddress = json['salonAddress'];
@@ -47,7 +45,6 @@ class BookingModel {
     data['servicioId'] = this.servicioId;
     data['servicioName'] = this.servicioName;
     data['establecimiento'] = this.establecimiento;
-    data['idEstablecidiento'] = this.idEstablecidiento;
     data['customerName'] = this.customerName;
     data['customerEmail'] = this.customerEmail;
     data['salonAddress'] = this.salonAddress;

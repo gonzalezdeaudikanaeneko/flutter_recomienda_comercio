@@ -1,5 +1,5 @@
 
-/*import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:recomienda_flutter/main.dart';
 
@@ -19,7 +19,7 @@ void initFirebaseMessagingHandler(AndroidNotificationChannel channel) async{
             channel.name,
             channelDescription: channel.description,
             icon: 'launch_background'
-          )
+          ),
         )
       );
     } 
@@ -29,4 +29,4 @@ void initFirebaseMessagingHandler(AndroidNotificationChannel channel) async{
   FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
     //Here add Navigation to push with it
   });
-}*/
+}
